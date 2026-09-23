@@ -13,18 +13,17 @@ Praktikum ini membuat aplikasi **Kalkulator Desktop** menggunakan **C# Windows F
 
 ## 2. Tampilan Aplikasi
 
-<!-- screenshot form kalkulator di sini -->
-<!-- Contoh: ![Tampilan Kalkulator](screenshots/tampilan-kalkulator.png) -->
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/434caf9a-b57e-430d-a9e5-a7bc6603fd66" />
+
+<img width="342" height="462" alt="image" src="https://github.com/user-attachments/assets/665127aa-05cd-40b7-ad80-fe94396a9dee" />
 
 <br><br><br>
 
 ## 3. Hasil Pengujian
 
-<!-- screenshot hasil uji tiap skenario di sini -->
-
 | Skenario | Input | Expected | Screenshot |
 |---|---|---|---|
-| Penjumlahan | `10 + 20 =` | `30` | <!-- ![penjumlahan](screenshots/penjumlahan.png) --> |
+| Penjumlahan | `10 + 20 =` | `30` |  |
 | Pengurangan | `30 − 12 =` | `18` | <!-- ![pengurangan](screenshots/pengurangan.png) --> |
 | Perkalian | `6 × 7 =` | `42` | <!-- ![perkalian](screenshots/perkalian.png) --> |
 | Pembagian | `100 ÷ 4 =` | `25` | <!-- ![pembagian](screenshots/pembagian.png) --> |
