@@ -60,4 +60,4 @@ Secara matematis, pembagian dengan nol tidak terdefinisi. Di C#, `double.Parse` 
 
 ## 5. Kesimpulan
 
-Kesimpulan
+Praktikum ini berhasil mengimplementasikan kalkulator desktop sederhana menggunakan C# Windows Forms yang mencakup empat operasi aritmatika dasar (+, −, ×, ÷), penanganan input digit dan desimal, serta validasi pembagian dengan nol lewat try-catch agar aplikasi tidak crash. Konsep utama yang dipelajari adalah efisiensi event handler—satu method (NumberButton_Click, OperatorButton_Click) dapat melayani banyak tombol berkat parameter object sender—serta pentingnya menyimpan state (firstNumber, operation, secondNumber) di antara input pengguna. Sebagai pengembangan lanjutan, ditambahkan lblExpression untuk menampilkan ekspresi berjalan (mis. 10 +) agar pengalaman pengguna lebih mirip kalkulator fisik, tanpa mengubah logika perhitungan inti.
