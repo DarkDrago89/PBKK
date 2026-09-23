@@ -35,11 +35,11 @@ Praktikum ini membuat aplikasi **Kalkulator Desktop** menggunakan **C# Windows F
 
 **1. Apa fungsi `object sender` pada event handler?**
 
-`sender` adalah referensi ke objek yang memicu event tersebut — dalam kasus ini, tombol (`Button`) mana yang diklik. Karena tipenya `object` (generik), `sender` perlu di-*cast* dulu ke `Button` (`Button button = (Button)sender;`) sebelum diakses properti spesifiknya seperti `.Text`. Dengan begini, satu method bisa "tahu" tombol mana yang memanggilnya tanpa perlu menulis kode terpisah untuk tiap tombol.
+`sender` adalah referensi ke objek yang memicu event tersebut dalam kasus ini, tombol (`Button`) mana yang diklik. Karena tipenya `object` (generik), `sender` perlu di-*cast* dulu ke `Button` (`Button button = (Button)sender;`) sebelum diakses properti spesifiknya seperti `.Text`. Dengan begini, satu method bisa "tahu" tombol mana yang memanggilnya tanpa perlu menulis kode terpisah untuk tiap tombol.
 
 **2. Mengapa semua tombol angka dapat memakai satu `NumberButton_Click`?**
 
-Karena logikanya sama persis untuk semua tombol 0–9: ambil teks tombol yang diklik lalu tambahkan (atau ganti) ke `txtDisplay`. Perbedaan antar tombol hanya pada teks/angka yang ditampilkan, dan itu bisa diambil langsung dari `((Button)sender).Text`. Jadi daripada menulis 10 method identik untuk tiap angka, cukup satu handler yang di-attach ke semua tombol angka lewat properti `Click` — ini menerapkan prinsip *DRY (Don't Repeat Yourself)*.
+Karena logikanya sama persis untuk semua tombol 0–9: ambil teks tombol yang diklik lalu tambahkan (atau ganti) ke `txtDisplay`. Perbedaan antar tombol hanya pada teks/angka yang ditampilkan, dan itu bisa diambil langsung dari `((Button)sender).Text`. Jadi daripada menulis 10 method identik untuk tiap angka, cukup satu handler yang di-attach ke semua tombol angka lewat properti `Click`. Ini menerapkan prinsip *DRY (Don't Repeat Yourself)*.
 
 **3. Apa perbedaan `firstNumber`, `secondNumber`, dan `result`?**
 
@@ -55,9 +55,9 @@ Secara matematis, pembagian dengan nol tidak terdefinisi. Di C#, `double.Parse` 
 
 **5. Bagaimana `try-catch` membantu menjaga aplikasi tetap stabil?**
 
-`try-catch` mencegah *exception* (seperti `DivideByZeroException` atau `FormatException` dari `double.Parse` jika input tidak valid) membuat aplikasi *crash*. Ketika terjadi error di dalam blok `try`, eksekusi langsung dialihkan ke blok `catch`, di mana pesan error ditampilkan lewat `MessageBox.Show(ex.Message, "Error")` — user diberi tahu apa yang salah, tapi aplikasi tetap berjalan dan bisa dipakai kembali tanpa perlu di-restart.
+`try-catch` mencegah *exception* (seperti `DivideByZeroException` atau `FormatException` dari `double.Parse` jika input tidak valid) membuat aplikasi *crash*. Ketika terjadi error di dalam blok `try`, eksekusi langsung dialihkan ke blok `catch`, di mana pesan error ditampilkan lewat `MessageBox.Show(ex.Message, "Error")`, user diberi tahu apa yang salah, tapi aplikasi tetap berjalan dan bisa dipakai kembali tanpa perlu di-restart.
 
 
 ## 5. Kesimpulan
 
-Praktikum ini berhasil mengimplementasikan kalkulator desktop sederhana menggunakan C# Windows Forms yang mencakup empat operasi aritmatika dasar (+, −, ×, ÷), penanganan input digit dan desimal, serta validasi pembagian dengan nol lewat try-catch agar aplikasi tidak crash. Konsep utama yang dipelajari adalah efisiensi event handler—satu method (NumberButton_Click, OperatorButton_Click) dapat melayani banyak tombol berkat parameter object sender—serta pentingnya menyimpan state (firstNumber, operation, secondNumber) di antara input pengguna. Sebagai pengembangan lanjutan, ditambahkan lblExpression untuk menampilkan ekspresi berjalan (mis. 10 +) agar pengalaman pengguna lebih mirip kalkulator fisik, tanpa mengubah logika perhitungan inti.
+Praktikum ini berhasil mengimplementasikan kalkulator desktop sederhana menggunakan C# Windows Forms yang mencakup empat operasi aritmatika dasar (+, −, ×, ÷), penanganan input digit dan desimal, serta validasi pembagian dengan nol lewat try-catch agar aplikasi tidak crash. Konsep utama yang dipelajari adalah efisiensi event handler dengan satu method (NumberButton_Click, OperatorButton_Click) dapat melayani banyak tombol berkat parameter object sender, serta pentingnya menyimpan state (firstNumber, operation, secondNumber) di antara input pengguna. Sebagai pengembangan lanjutan, ditambahkan lblExpression untuk menampilkan ekspresi berjalan (mis. 10 +) agar pengalaman pengguna lebih mirip kalkulator fisik, tanpa mengubah logika perhitungan inti.
