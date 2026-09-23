@@ -1,8 +1,8 @@
 # Laporan Praktikum: Kalkulator Desktop dengan C# WinForms
 
 **Mata Kuliah:** NET Programming dengan C#
-**Nama:** Agil
-**NRP/Angkatan:** 2024
+**Nama:** Agil Lukman Hakim Muchdi
+**NRP/Angkatan:** 5025241037/2024
 **Program Studi:** Teknik Informatika, ITS
 
 ---
@@ -23,13 +23,13 @@ Praktikum ini membuat aplikasi **Kalkulator Desktop** menggunakan **C# Windows F
 
 | Skenario | Input | Expected | Screenshot |
 |---|---|---|---|
-| Penjumlahan | `10 + 20 =` | `30` |  |
-| Pengurangan | `30 − 12 =` | `18` | <!-- ![pengurangan](screenshots/pengurangan.png) --> |
-| Perkalian | `6 × 7 =` | `42` | <!-- ![perkalian](screenshots/perkalian.png) --> |
-| Pembagian | `100 ÷ 4 =` | `25` | <!-- ![pembagian](screenshots/pembagian.png) --> |
-| Desimal | `2.5 × 4 =` | `10` | <!-- ![desimal](screenshots/desimal.png) --> |
-| Bagi nol | `10 ÷ 0 =` | Pesan error | <!-- ![bagi-nol](screenshots/bagi-nol.png) --> |
-| Clear | Tekan `C` | Display `0` | <!-- ![clear](screenshots/clear.png) --> |
+| Penjumlahan | `10 + 20 =` | `30` | <img width="342" height="482" alt="image" src="https://github.com/user-attachments/assets/15c4a5a2-b493-4943-8322-dd595833973d" /> |
+| Pengurangan | `30 − 12 =` | `18` | <img width="342" height="482" alt="image" src="https://github.com/user-attachments/assets/3b791e3d-5c9b-4a44-83e0-48cf2a354530" /> |
+| Perkalian | `6 × 7 =` | `42` | <img width="342" height="482" alt="image" src="https://github.com/user-attachments/assets/57588e4b-1126-46f4-b868-3943efcea9c0" /> |
+| Pembagian | `100 ÷ 4 =` | `25` | <img width="342" height="482" alt="image" src="https://github.com/user-attachments/assets/309efc42-593a-46f4-b772-4db566775f6a" /> |
+| Desimal | `2.5 × 4 =` | `10` | <img width="342" height="482" alt="image" src="https://github.com/user-attachments/assets/563e50c9-7b9c-4cf7-b06e-52c5d218f9d9" /> |
+| Bagi nol | `10 ÷ 0 =` | Pesan error | <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/0bb88314-7214-4836-b339-39b8372f4634" /> |
+| Clear | Tekan `C` | Display `0` | <img width="342" height="482" alt="image" src="https://github.com/user-attachments/assets/d9102afc-ec8d-495c-aaa7-65c4ece336f6" /> |
 
 ## 4. Jawaban Refleksi
 
@@ -60,4 +60,4 @@ Secara matematis, pembagian dengan nol tidak terdefinisi. Di C#, `double.Parse` 
 
 ## 5. Kesimpulan
 
-<!-- Kesimpulan singkat di sini -->
+Kesimpulan
