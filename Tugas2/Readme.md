@@ -1,9 +1,9 @@
 # Laporan Praktikum: Kalkulator Desktop dengan C# WinForms
 
-**Mata Kuliah:** NET Programming dengan C#
-**Nama:** Agil Lukman Hakim Muchdi
-**NRP/Angkatan:** 5025241037/2024
-**Program Studi:** Teknik Informatika, ITS
+- **Mata Kuliah:** NET Programming dengan C#
+- **Nama:** Agil Lukman Hakim Muchdi
+- **NRP/Angkatan:** 5025241037/2024
+- **Program Studi:** Teknik Informatika, ITS
 
 ---
 
