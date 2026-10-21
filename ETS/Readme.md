@@ -6,7 +6,7 @@
 - **Program Studi:** Teknik Informatika, Institut Teknologi Sepuluh Nopember
 - **Nama Proyek:** KasKita
 - **Repository GitHub Kelompok:** [https://github.com/Miko-a/KasKita.git](https://github.com/Miko-a/KasKita.git)
-
+- **Video Demo:** [https://www.youtube.com/watch?v=mV4gYxfGaKI](https://www.youtube.com/watch?v=mV4gYxfGaKI)
 ---
 
 ## 1. Deskripsi Singkat
@@ -17,12 +17,9 @@ Fitur utama KasKita mencakup pencatatan transaksi masuk dan keluar, pengelolaan 
 
 Alur umum aplikasi: `View (WPF/XAML) → ViewModel → Model → AppDbContext (EF Core) → SQLite`.
 
-## 2. Kontribusi Personal
+## 2. Kontribusi
 
-- **Tanggung jawab dalam kelompok:** 
-- **Implementasi yang saya kerjakan:** 
-- **Kendala dan penyelesaian:** 
-- **Kolaborasi:**
+Semua bekerja bersama dan mengerjakan bersama-sama
 
 ## 3. Tampilan Aplikasi
 
