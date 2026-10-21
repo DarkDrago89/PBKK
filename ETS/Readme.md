@@ -7,6 +7,7 @@
 - **Nama Proyek:** KasKita
 - **Repository GitHub Kelompok:** [https://github.com/Miko-a/KasKita.git](https://github.com/Miko-a/KasKita.git)
 - **Video Demo:** [https://www.youtube.com/watch?v=mV4gYxfGaKI](https://www.youtube.com/watch?v=mV4gYxfGaKI)
+- **PRD:** [PRD_KasKita.docx](https://docs.google.com/document/d/104-ydLPS9vUFL73pSE94ZDUV3hY2efUM/edit?usp=sharing&ouid=114798885231842933346&rtpof=true&sd=true)
 ---
 
 ## 1. Deskripsi Singkat
