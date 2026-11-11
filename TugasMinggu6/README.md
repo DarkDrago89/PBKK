@@ -1,10 +1,10 @@
 # Laporan Hands-On Lab 2 – Aplikasi WPF + C# Terhubung SQL Server dengan ADO.NET
 
-**Nama:** Agil Lukman Hakim Muchdi
-**NIM:** 5025241037
-**Program Studi:** IF
-**Mata Kuliah:** .NET Programming with C#
-**Studi Kasus:** Student Registration App
+- **Nama:** Agil Lukman Hakim Muchdi
+- **NRP:** 5025241037
+- **Program Studi:** IF
+- **Mata Kuliah:** .NET Programming with C#
+- **Studi Kasus:** Student Registration App
 
 ---
 
