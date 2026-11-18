@@ -6,7 +6,7 @@ namespace StudentRegistration.Repositories;
 public class StudentRepository
 {
     // Sesuaikan nama server jika instance SQL Server Anda berbeda
-    // Contoh: "(localdb)\MSSQLLocalDB" atau "localhost" atau ".\SQLEXPRESS"
+    // Contoh: "(localdb)\MSSQLLocalDB" atau ".\SQLEXPRESS"
     private readonly string _connectionString =
         @"Server=localhost;Database=StudentRegistrationDB;Trusted_Connection=True;TrustServerCertificate=True;";
 
@@ -68,6 +68,62 @@ public class StudentRepository
         }
 
         return students;
+    }
+
+    public List<Models.Program> GetPrograms()
+    {
+        var programs = new List<Models.Program>();
+
+        const string sql = """
+            SELECT ProgramId, ProgramCode, ProgramName, IsActive
+            FROM Programs
+            WHERE IsActive = 1
+            ORDER BY ProgramName;
+            """;
+
+        using var connection = new SqlConnection(_connectionString);
+        using var command = new SqlCommand(sql, connection);
+        connection.Open();
+
+        using var reader = command.ExecuteReader();
+        while (reader.Read())
+        {
+            programs.Add(new Models.Program
+            {
+                ProgramId = reader.GetInt32(reader.GetOrdinal("ProgramId")),
+                ProgramCode = reader.GetString(reader.GetOrdinal("ProgramCode")),
+                ProgramName = reader.GetString(reader.GetOrdinal("ProgramName")),
+                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive"))
+            });
+        }
+
+        return programs;
+    }
+
+    public void AddStudent(Student student)
+    {
+        const string sql = """
+            INSERT INTO Students
+                (NIM, Name, ProgramId, BirthDate, Address, PhoneNumber)
+            VALUES
+                (@NIM, @Name, @ProgramId, @BirthDate, @Address, @PhoneNumber);
+            """;
+
+        using var connection = new SqlConnection(_connectionString);
+        using var command = new SqlCommand(sql, connection);
+
+        command.Parameters.AddWithValue("@NIM", student.NIM);
+        command.Parameters.AddWithValue("@Name", student.Name);
+        command.Parameters.AddWithValue("@ProgramId", student.ProgramId);
+        command.Parameters.AddWithValue("@BirthDate",
+            student.BirthDate.HasValue ? student.BirthDate.Value : DBNull.Value);
+        command.Parameters.AddWithValue("@Address",
+            string.IsNullOrWhiteSpace(student.Address) ? DBNull.Value : student.Address);
+        command.Parameters.AddWithValue("@PhoneNumber",
+            string.IsNullOrWhiteSpace(student.PhoneNumber) ? DBNull.Value : student.PhoneNumber);
+
+        connection.Open();
+        command.ExecuteNonQuery();
     }
 
     /// <summary>
