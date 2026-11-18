@@ -176,8 +176,6 @@ StudentDataGrid.ItemsSource = students;
 
 ## 7. Hasil Pengujian (Screenshot)
 
-> **Cara memasukkan screenshot:** simpan gambar di folder `screenshots/` lalu ganti nama file pada baris `![...](...)` di bawah. Jika memakai GitHub, kamu juga bisa drag & drop gambar langsung ke editor README di GitHub.
-
 ### 7.1 Database di SSMS
 
 Hasil `SELECT * FROM Students` di SQL Server Management Studio.
@@ -190,31 +188,21 @@ Solution Explorer menampilkan folder `Models`, `Repositories`, dan file utama.
 
 ![Solution Explorer](screenshots/02-solution-explorer.png)
 
-### 7.3 Package Microsoft.Data.SqlClient Terinstal
-
-![NuGet Package](screenshots/03-nuget-sqlclient.png)
-
-### 7.4 Aplikasi Berjalan – Data Tampil di DataGrid
+### 7.3 Aplikasi Berjalan – Data Tampil di DataGrid
 
 Data mahasiswa dari SQL Server berhasil tampil pada `DataGrid`.
 
-![DataGrid](screenshots/04-datagrid.png)
+![DataGrid](screenshots/03-datagrid.png)
 
-### 7.5 Tombol Refresh
+### 7.4 Tombol Refresh
 
 Klik **Refresh** untuk mengambil ulang data dari database.
 
-![Refresh](screenshots/05-refresh.png)
+![Refresh](screenshots/04-refresh.png)
 
-### 7.6 Mini Challenge (Alamat, Dibuat, Total Mahasiswa)
+### 7.5 Mini Challenge (Alamat, Dibuat, Total Mahasiswa)
 
-![Mini Challenge](screenshots/06-mini-challenge.png)
-
-### 7.7 *(Opsional)* Error Handling
-
-Pesan error ketika koneksi database gagal (misal nama server salah).
-
-![Error Handling](screenshots/07-error-handling.png)
+![Mini Challenge](screenshots/05-mini-challenge.png)
 
 ---
 
