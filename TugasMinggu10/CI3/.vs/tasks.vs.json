@@ -1,0 +1,13 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "Jalankan CI3 (localhost:8090)",
+      "appliesTo": "/",
+      "type": "launch",
+      "workingDirectory": "${workspaceRoot}",
+      "command": "${env.COMSPEC}",
+      "args": [ "/c", "jalankan.bat" ]
+    }
+  ]
+}

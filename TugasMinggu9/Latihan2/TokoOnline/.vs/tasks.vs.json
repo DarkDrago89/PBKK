@@ -1,0 +1,29 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "1. Jalankan Aplikasi (localhost:8082)",
+      "appliesTo": "/",
+      "type": "launch",
+      "workingDirectory": "${workspaceRoot}",
+      "command": "${env.COMSPEC}",
+      "args": [ "/c", "jalankan.bat" ]
+    },
+    {
+      "taskLabel": "2. Reset Database (migrate:refresh + seed)",
+      "appliesTo": "/",
+      "type": "default",
+      "workingDirectory": "${workspaceRoot}",
+      "command": "${env.COMSPEC}",
+      "args": [ "/c", "php spark migrate:refresh --all -f && php spark db:seed DatabaseSeeder" ]
+    },
+    {
+      "taskLabel": "3. Lihat Daftar Route",
+      "appliesTo": "/",
+      "type": "default",
+      "workingDirectory": "${workspaceRoot}",
+      "command": "${env.COMSPEC}",
+      "args": [ "/c", "php spark routes" ]
+    }
+  ]
+}

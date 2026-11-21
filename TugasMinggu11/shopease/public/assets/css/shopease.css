@@ -1,0 +1,158 @@
+/* ==========================================================================
+   ShopEase Design System (di atas Bootstrap 5.3)
+   Warna utama ungu mengikuti identitas ShopEase.
+   ========================================================================== */
+:root {
+    --se-primary: #6d28d9;
+    --se-primary-600: #7c3aed;
+    --se-primary-700: #5b21b6;
+    --se-primary-900: #2e1065;
+    --se-primary-50: #f5f3ff;
+    --se-primary-100: #ede9fe;
+    --se-accent: #f59e0b;
+    --se-ink: #1e1b4b;
+    --se-muted: #6b7280;
+    --se-bg: #f7f6fc;
+    --se-card: #ffffff;
+    --se-border: #e9e5f5;
+    --se-radius: 16px;
+    --se-shadow: 0 10px 30px -12px rgba(76, 29, 149, .18);
+    --se-gradient: linear-gradient(135deg, #7c3aed 0%, #6d28d9 45%, #4c1d95 100%);
+
+    /* override variabel Bootstrap */
+    --bs-primary: #6d28d9;
+    --bs-primary-rgb: 109, 40, 217;
+    --bs-link-color: #6d28d9;
+    --bs-link-color-rgb: 109, 40, 217;
+    --bs-link-hover-color: #5b21b6;
+    --bs-body-font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --bs-body-color: #1e1b4b;
+    --bs-border-radius: .75rem;
+}
+
+body { background: var(--se-bg); }
+a { text-decoration: none; }
+
+/* ---------- Tombol & form ---------- */
+.btn-primary {
+    --bs-btn-bg: var(--se-primary); --bs-btn-border-color: var(--se-primary);
+    --bs-btn-hover-bg: var(--se-primary-700); --bs-btn-hover-border-color: var(--se-primary-700);
+    --bs-btn-active-bg: var(--se-primary-900); --bs-btn-active-border-color: var(--se-primary-900);
+    --bs-btn-disabled-bg: #a78bfa; --bs-btn-disabled-border-color: #a78bfa;
+    font-weight: 600;
+}
+.btn-outline-primary {
+    --bs-btn-color: var(--se-primary); --bs-btn-border-color: var(--se-primary);
+    --bs-btn-hover-bg: var(--se-primary); --bs-btn-hover-border-color: var(--se-primary);
+    --bs-btn-active-bg: var(--se-primary-700);
+    font-weight: 600;
+}
+.btn-accent { background: var(--se-accent); color: #1f1300; font-weight: 700; border: 0; }
+.btn-accent:hover { background: #d97706; color: #1f1300; }
+.form-control, .form-select { border-color: var(--se-border); padding: .65rem .9rem; }
+.form-select { padding-right: 2.4rem; } /* ruang untuk panah dropdown */
+.form-control:focus, .form-select:focus { border-color: #a78bfa; box-shadow: 0 0 0 .25rem rgba(124, 58, 237, .15); }
+.form-check-input:checked { background-color: var(--se-primary); border-color: var(--se-primary); }
+.input-icon { position: relative; }
+.input-icon > .bi { position: absolute; left: .9rem; top: 50%; transform: translateY(-50%); color: #9ca3af; pointer-events: none; }
+.input-icon > .form-control { padding-left: 2.6rem; }
+.input-icon > .toggle-pass { position: absolute; right: .5rem; top: 50%; transform: translateY(-50%); border: 0; background: none; color: #9ca3af; padding: .25rem .5rem; }
+.input-icon > .toggle-pass:hover { color: var(--se-primary); }
+/* kolom dengan tombol mata: beri ruang & sembunyikan ikon error bawaan Bootstrap agar tidak bertumpuk */
+.input-icon:has(.toggle-pass) > .form-control { padding-right: 2.75rem; background-image: none; }
+.text-primary { color: var(--se-primary) !important; }
+.bg-primary-subtle { background: var(--se-primary-100) !important; }
+
+/* ---------- Kartu ---------- */
+.se-card { background: var(--se-card); border: 1px solid var(--se-border); border-radius: var(--se-radius); box-shadow: var(--se-shadow); }
+.se-section-title { font-weight: 800; letter-spacing: -.01em; }
+
+/* ---------- Logo ---------- */
+.se-logo { display: inline-flex; align-items: center; gap: .6rem; color: var(--se-ink); }
+.se-logo svg { flex: none; }
+.se-logo .se-logo-name { font-weight: 800; font-size: 1.35rem; line-height: 1; letter-spacing: -.02em; }
+.se-logo .se-logo-sub { font-size: .72rem; color: var(--se-muted); font-weight: 600; letter-spacing: .02em; }
+.se-logo.light { color: #fff; }
+.se-logo.light .se-logo-sub { color: rgba(255,255,255,.75); }
+
+/* ---------- Halaman autentikasi ---------- */
+.auth-wrap { min-height: 100vh; display: grid; grid-template-columns: 1.05fr 1fr; }
+.auth-side { background: var(--se-gradient); color: #fff; padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
+.auth-side::before, .auth-side::after { content: ""; position: absolute; border-radius: 50%; background: rgba(255,255,255,.08); }
+.auth-side::before { width: 420px; height: 420px; right: -140px; top: -120px; }
+.auth-side::after { width: 300px; height: 300px; left: -100px; bottom: -110px; }
+.auth-side > * { position: relative; z-index: 1; }
+.auth-hero-title { font-size: 2.4rem; font-weight: 800; line-height: 1.15; letter-spacing: -.02em; }
+.auth-feature { display: flex; gap: .8rem; align-items: flex-start; margin-bottom: .9rem; }
+.auth-feature .bi { font-size: 1.1rem; background: rgba(255,255,255,.15); border-radius: 10px; padding: .45rem .55rem; }
+.auth-demo { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2); border-radius: 14px; padding: 1rem 1.1rem; font-size: .85rem; }
+.auth-demo code { color: #fde68a; }
+.auth-main { display: flex; align-items: center; justify-content: center; padding: 2.5rem 1.25rem; }
+.auth-card { width: 100%; max-width: 460px; overflow: hidden; }
+.auth-card-head { background: var(--se-gradient); color: #fff; text-align: center; padding: 1.6rem 1.5rem 1.4rem; }
+.auth-card-head .bi { font-size: 1.9rem; }
+.auth-card-body { padding: 1.75rem; }
+.pass-meter { height: 6px; border-radius: 6px; background: #ede9fe; overflow: hidden; }
+.pass-meter > div { height: 100%; width: 0; transition: width .25s, background-color .25s; }
+@media (max-width: 991.98px) {
+    .auth-wrap { grid-template-columns: 1fr; }
+    .auth-side { display: none; }
+}
+
+/* ---------- Storefront ---------- */
+.se-navbar { background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--se-border); }
+.se-navbar .nav-link { font-weight: 600; color: #4b5563; }
+.se-navbar .nav-link:hover, .se-navbar .nav-link.active { color: var(--se-primary); }
+.se-search { max-width: 420px; }
+.se-search .form-control { border-radius: 999px; padding-left: 2.6rem; background: var(--se-primary-50); border-color: transparent; }
+.se-icon-btn { width: 42px; height: 42px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; background: var(--se-primary-50); color: var(--se-primary); position: relative; }
+.se-icon-btn .badge { position: absolute; top: -4px; right: -4px; }
+.se-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--se-gradient); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem; flex: none; }
+.se-avatar.lg { width: 84px; height: 84px; font-size: 1.8rem; }
+.hero { background: var(--se-gradient); color: #fff; border-radius: 24px; padding: 3rem; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; width: 380px; height: 380px; right: -60px; top: -80px; border-radius: 50%; background: rgba(255,255,255,.08); }
+.hero h1 { font-weight: 800; font-size: 2.6rem; letter-spacing: -.02em; }
+.hero-art { font-size: 9rem; line-height: 1; filter: drop-shadow(0 20px 30px rgba(0,0,0,.25)); position: relative; z-index: 1; }
+.cat-card { text-align: center; padding: 1.1rem .5rem; transition: transform .15s, box-shadow .15s; }
+.cat-card:hover { transform: translateY(-3px); }
+.cat-card .cat-icon { width: 56px; height: 56px; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: .5rem; }
+.prod-card { overflow: hidden; transition: transform .15s, box-shadow .15s; }
+.prod-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -16px rgba(76, 29, 149, .3); }
+.prod-thumb { aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; color: var(--se-primary); }
+.badge-soon { background: #fef3c7; color: #92400e; font-weight: 700; font-size: .68rem; }
+.se-footer { background: var(--se-primary-900); color: rgba(255,255,255,.75); }
+.se-footer a { color: #fff; }
+
+/* ---------- Alert ---------- */
+.alert { border: 0; border-radius: 12px; }
+.alert-success { background: #ecfdf5; color: #065f46; }
+.alert-danger { background: #fef2f2; color: #991b1b; }
+.alert-info { background: var(--se-primary-50); color: var(--se-primary-700); }
+
+/* ---------- Panel admin / operator ---------- */
+/* latar kolom sidebar dilukis di .panel agar tetap penuh walau konten lebih panjang dari layar */
+.panel { display: flex; min-height: 100vh; background: linear-gradient(to right, var(--se-primary-900) 260px, var(--se-bg) 260px); }
+.panel-side { width: 260px; flex: none; background: var(--se-primary-900); color: rgba(255,255,255,.7); padding: 1.4rem 1rem; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; }
+.panel-side .side-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.4); margin: 1.2rem .75rem .4rem; font-weight: 700; }
+.panel-side .side-link { display: flex; align-items: center; gap: .75rem; padding: .62rem .75rem; border-radius: 10px; color: rgba(255,255,255,.75); font-weight: 600; font-size: .92rem; }
+.panel-side .side-link:hover { background: rgba(255,255,255,.08); color: #fff; }
+.panel-side .side-link.active { background: var(--se-primary-600); color: #fff; box-shadow: 0 8px 20px -8px rgba(124, 58, 237, .8); }
+.panel-side .side-link.disabled { opacity: .45; pointer-events: none; }
+.panel-side .side-link .badge { margin-left: auto; }
+.panel-main { flex: 1; min-width: 0; }
+.panel-top { background: #fff; border-bottom: 1px solid var(--se-border); padding: .9rem 1.75rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+.panel-body { padding: 1.75rem; }
+.stat-card { padding: 1.25rem; display: flex; align-items: center; gap: 1rem; }
+.stat-icon { width: 52px; height: 52px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.4rem; flex: none; }
+.stat-value { font-size: 1.6rem; font-weight: 800; line-height: 1.1; }
+.role-badge { font-weight: 700; font-size: .72rem; padding: .35em .7em; border-radius: 999px; text-transform: capitalize; }
+.role-admin { background: #fee2e2; color: #b91c1c; }
+.role-operator { background: #ffedd5; color: #c2410c; }
+.role-customer { background: var(--se-primary-100); color: var(--se-primary-700); }
+.table > :not(caption) > * > * { padding: .85rem 1rem; }
+.table thead th { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: var(--se-muted); background: #faf9ff; }
+.pagination { --bs-pagination-active-bg: var(--se-primary); --bs-pagination-active-border-color: var(--se-primary); --bs-pagination-color: var(--se-primary); }
+@media (max-width: 991.98px) {
+    .panel { background: var(--se-bg); }
+    .panel-side { display: none; }
+}

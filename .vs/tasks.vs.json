@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Latihan1",
+      "appliesTo": "TugasMinggu9/Latihan1/",
+      "type": "launch"
+    }
+  ]
+}
