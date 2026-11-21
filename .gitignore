@@ -1,0 +1,61 @@
+# ==========================================================================
+#  .gitignore repo PBKK (C# .NET + CodeIgniter 3/4)
+#  Proyek CodeIgniter punya .gitignore sendiri (vendor/, .env, writable/*).
+#  File ini menangani yang berlaku untuk SEMUA folder tugas.
+# ==========================================================================
+
+# ---------- Visual Studio ----------
+# Folder .vs berisi cache/index/state milik IDE (berubah tiap kali dibuka).
+# KECUALI tasks.vs.json: konfigurasi menu "Jalankan ..." untuk tugas CodeIgniter.
+**/.vs/*
+!**/.vs/tasks.vs.json
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# ---------- .NET build output (Tugas2, TugasMinggu2/4/6) ----------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ll]og/
+*.pdb
+*.cache
+project.lock.json
+project.fragment.lock.json
+artifacts/
+TestResults/
+*.nupkg
+packages/
+
+# ---------- PHP / Composer ----------
+vendor/
+composer.phar
+.phpunit.result.cache
+php_errors.log
+
+# ---------- Database lokal & rahasia ----------
+# Database SQLite dibuat ulang dengan: php spark migrate --all && php spark db:seed DatabaseSeeder
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.*
+!.env.example
+
+# ---------- Editor & OS ----------
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------- Node (jika ada alat bantu screenshot) ----------
+node_modules/
