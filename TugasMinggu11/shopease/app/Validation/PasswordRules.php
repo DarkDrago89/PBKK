@@ -10,10 +10,12 @@ class PasswordRules
 {
     public function password_kuat(?string $str, ?string &$error = null): bool
     {
-        // TODO(human): kembalikan true hanya jika $str memenuhi kebijakan password ShopEase.
-        //   Pesan error saat gagal sudah disiapkan: "Password harus mengandung huruf besar,
-        //   huruf kecil, dan angka." (lihat $messages di AuthController::store).
-        //   Panjang minimal 8 sudah dicek rule min_length[8] sebelum rule ini.
-        return true; // placeholder: semua password lolos sampai kebijakan diisi
+        // Kebijakan: minimal satu huruf besar, satu huruf kecil, dan satu angka.
+        // (Panjang minimal 8 sudah dicek oleh rule min_length[8].)
+        $str = (string) $str;
+
+        return preg_match("/[A-Z]/", $str) === 1
+            && preg_match("/[a-z]/", $str) === 1
+            && preg_match("/[0-9]/", $str) === 1;
     }
 }

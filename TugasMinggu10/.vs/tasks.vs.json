@@ -5,7 +5,7 @@
       "taskLabel": "CodeIgniter 3 - Toko Buah (localhost:8090)",
       "appliesTo": "/",
       "type": "launch",
-      "workingDirectory": "${workspaceRoot}\CI3",
+      "workingDirectory": "${workspaceRoot}\\CI3",
       "command": "${env.COMSPEC}",
       "args": [ "/c", "jalankan.bat" ]
     },
@@ -13,7 +13,7 @@
       "taskLabel": "CodeIgniter 4 - Toko Buah (localhost:8080)",
       "appliesTo": "/",
       "type": "launch",
-      "workingDirectory": "${workspaceRoot}\CI4",
+      "workingDirectory": "${workspaceRoot}\\CI4",
       "command": "${env.COMSPEC}",
       "args": [ "/c", "jalankan.bat" ]
     }
